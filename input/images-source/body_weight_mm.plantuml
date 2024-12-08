@@ -1,0 +1,56 @@
+@startmindmap
+
+skinparam svgDimensionStyle false
+
++ **Body Weight**
+--[#fcc] measurement
+---[#fcc] value
+----[#cff] DT: integer
+----[#fcc] unit
+-----_ kg
+-----_ g (for newborns)
+---[#fcc] reference range
+----_ low
+----_ high
+----_ age
+---[#fcc] interpretation
+----[#cff] DT: code
+-----_ low
+-----_ normal
+-----_ high
+
+-- lost body structures
+
+++[#ff8] administrative
++++[#fcc] identifier
++++[#fcc] dateTime
+++++[#cff] DT: instant
++++[#fcc] encounter
+
++++[#88f] involved persons
+++++[#88f] subject
+++++[#88f] author
+++++[#88f] performer
+
+
+++[#ff8] protocol
++++[#ff8] measuring type
+++++[#cff] DT: code
++++++_ measured
++++++_ estimated
++++[#ff8] clothing
+++++[#cff] DT: code
++++++_ none
++++++_ light
++++++_ middle
++++++_ heavy
++++[#ff8] eating
+++++[#cff] DT: code
++++++_ beforeMeal
++++++_ afterMeal
++++[#ff8] shoes
+++++[#cff] DT: boolean
+++[#ff8] comment
++++[#cff] DT: text
+
+@endmindmap

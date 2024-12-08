@@ -1,0 +1,53 @@
+@startuml
+
+'skinparam svgDimensionStyle false
+
+title Body Weight FHIR Profile
+
+class "**Body Weight (Observation)**" as bw {
+    category: vital-sign-bw
+    code: code
+    value: integer
+    unit: code
+    dataAbsentReason
+    referenceRange: Range
+    interpretation: code
+    method: code
+    dateTime: instant
+}
+
+
+class "Lost Body Parts" as lbp {
+    code: code
+}
+
+class "Clothing" as clothing {
+    code
+}
+
+class "Shoes" as shoes {
+    code
+}
+
+class "Eating" as eating {
+    code
+}
+
+class "Author" as a
+class "Subject" as s {
+    id
+    age
+}
+class "Performer" as p
+
+bw -left- "0..1" a
+bw -right- "1" s
+bw -right- "0..1" p
+
+bw *-- "0..*" lbp
+
+bw *-- "0..1" clothing
+bw *-- "0..1" shoes
+bw *-- "0..1" eating
+
+@enduml

@@ -1,0 +1,43 @@
+@startuml
+
+title Body Weight Hierarchy
+
+class "Vital Sign" as vs {
+    status: code
+    category: code = vital-sign
+    code: code
+    observationDate: instant|period
+}
+
+class "**Body Weight**" as bw {
+    category: code = vital-sign-bw
+    code: code
+    value: integer
+    unit: code
+    interpretation: code
+    date: instant
+    ...
+}
+
+class "Patient" as pat
+class "Author" as aut
+
+class "US Core BW" as usbw
+class "DE Core BW" as debw
+vs <|-- bw
+
+vs -right- pat : subject >
+vs -left- aut : author >
+
+bw <|-- usbw
+bw <|-- debw
+
+class "DE KBV BW" as dekbvbw
+class "DE MII BW" as demiibw
+class "DE Standard BW for EHR" as deehrbw
+
+debw <|-- dekbvbw
+debw <|-- demiibw
+debw <|-- deehrbw
+
+@enduml
