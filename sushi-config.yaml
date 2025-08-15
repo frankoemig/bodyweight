@@ -9,7 +9,7 @@ name: Body-Weight
 title: Body Weight Cross-Country Cross-Language Cross-Paradigm (Demo) IG
 description: Cross-Country, cross-paradigm Demo-Implementation Guide for Body Weight Measurements
 status: draft # draft | active | retired | unknown
-version: 0.1.1
+version: 0.1.2
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
